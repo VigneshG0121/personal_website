@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MPSA model for Fatigue Life Prediction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>MPSA model for Fatigue Life Prediction</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Back to Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+   <style>
+    p {
+      margin-bottom: 15px; /* Adjust space as needed */
+    }
+    .text-box {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    font-size: 16px;
+    }
+    .text-box img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .text-box img:hover {
+      transform: scale(1.05);
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      transform: scale(0.8);
+      opacity: 0;
+      animation: zoomIn 0.3s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { background: rgba(0,0,0,0); }
+      to   { background: rgba(0,0,0,0.9); }
+    }
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    </style>
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>Here you can write a full description of the project, methodology, results, etc.</p>
+         <div class="text-box">
+            <img src="mpsa1.png" onclick="openOverlay(this.src)">
+            </div>
+            <div class="text-box">
+            <img src="mpsa2.png" onclick="openOverlay(this.src)">
+            </div>
+      <h2>Key Findings</h2>
+      <ul>
+        <li>Finding 1</li>
+        <li>Finding 2</li>
+      </ul>
+
+      <h2>Links</h2>
+      <p>
+        <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a> |
+        <a href="#">Read Paper</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vignesh Kumar Gopalakrishnan</p>
+  </footer>
+</body>
+</html>

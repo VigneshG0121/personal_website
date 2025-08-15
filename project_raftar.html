@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula Student: Raftar Formula Racing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Formula Student: Raftar Formula Racing</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Back to Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+   <style>
+    p {
+      margin-bottom: 15px; /* Adjust space as needed */
+    }
+    .text-box {
+    max-width: 1000px;
+    margin:1rem auto;
+    padding: 0 1.5rem;
+    font-size: 16px;
+    }
+    .text-box img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .text-box img:hover {
+      transform: scale(1.05);
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      transform: scale(0.8);
+      opacity: 0;
+      animation: zoomIn 0.3s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { background: rgba(0,0,0,0); }
+      to   { background: rgba(0,0,0,0.9); }
+    }
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+</style>
+  <main>
+    <section>
+            <div class="text-box">
+    
+            <img src="raftar.jpg" onclick="openOverlay(this.src)">
+            </div>
+
+            <!-- 🔹 The overlay (fullscreen zoom) goes right before </body> -->
+            <div class="overlay" id="overlay" onclick="closeOverlay()">
+            <img id="overlayImage" src="raftar.jpg"Fullscreen">
+            </div>
+
+      <h2>Overview</h2>
+      We were recruited into RFR (Raftar Formula Racing) before we even stepped into insti, thanks to COVID, and it was a huge part of my campus life until I decided to move on after almost two years. 
+
+      <h4>Spaceframe Design</h4>
+      <p>The main task of the Frame and Composites subsystem is to, well, design the spaceframe which houses essentially the rest of the car.
+        In hindsight, designing the frame was no big deal. You have the rulebook and the accumulator size deciding most of the dimensions, while the vehicle dynamics team takes care of the rest.
+      </p>
+      <p>
+        The real trouble is when changes from all the other subsystems start trickling in well beyond the end of the design phase, and things does get out of hand when you're quite literally halfway through welding the frame. 
+        What started as a super ambitious project, mostly ends up being half prayers that the frame does not go back to being a stack of tubes.  
+      </p>
+      <p>
+        Despite everything, we have made significant improvements to the spaceframe design, as well as the entire manufacturing process. We brought down the weight by 10-15% with 30-35% increase in torsional stiffness.
+        The trend has continued within the subsystem over the years, and welding time for the latest frame was slightly over a couple of weeks, quite an improvement over the two months it took us in 2022.
+      </p>
+
+      <h4>Composite Structures</h4>
+      <p>
+        Aero-FRnC bonding session is probably the best way to describe composites. After the aero team finalise the geometric design, we work with them on the structural aspect with Ansys ACP coming clutch.
+        As time flew by, we did make sound strides in the design of the aerodynamic components like the Front and Rear Wing, Diffusers, Undertray etc, but the highlight remains the drastic improvements in the manufacturing of our carbon fiber and glass fiber composites. 
+        One look at the RFR23 and RFR24 and one could very easily tell.
+      </p>
+      <p>Personally, working with composites sparked my interest in mechanics, after which I was actively looking for projects around the mechanics of anisotropic and heterogenous media. One thing led to another and although I have diverged quite a bit from the traditional CF composites, biological matter in some sense are "composite materials", I guess I can still call myself a composite engineer xD </p>
+
+      <h2>Gallery</h2>
+            <div class="text-box">
+            <img src="raftar2.jpg" onclick="openOverlay(this.src)">
+            </div>
+
+            <div class="overlay" id="overlay" onclick="closeOverlay()">
+            <img id="overlayImage" src="raftar3.jpg">
+            </div>
+            <div class="text-box">
+            <img src="raftar3.jpg" onclick="openOverlay(this.src)">
+            </div>
+
+            <div class="overlay" id="overlay" onclick="closeOverlay()">
+            <img id="overlayImage" src="raftar3.jpg">
+            </div>
+            <div class="text-box">
+            <img src="raftar4.jpg" onclick="openOverlay(this.src)">
+            </div>
+
+            <div class="overlay" id="overlay" onclick="closeOverlay()">
+            <img id="overlayImage" src="raftar.jpg"Fullscreen">
+            </div>
+            <div class="text-box">
+            <img src="raftar5.jpg" onclick="openOverlay(this.src)">
+            </div>
+            
+            <div class="overlay" id="overlay" onclick="closeOverlay()">
+            <img id="overlayImage" src="raftar.jpg"Fullscreen">
+            </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vignesh Kumar Gopalakrishnan</p>
+  </footer>
+</body>
+</html>

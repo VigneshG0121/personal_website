@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Viscoplasticity for Soft Biological Matter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Fractal Viscoplasticity for Soft Biological Matter</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Back to Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+    <style>
+    p {
+      margin-bottom: 15px; /* Adjust space as needed */
+    }
+    .text-box {
+    max-width: 10000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    font-size: 16px;
+    }
+    .text-box img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .text-box img:hover {
+      transform: scale(1.05);
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      transform: scale(0.8);
+      opacity: 0;
+      animation: zoomIn 0.3s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { background: rgba(0,0,0,0); }
+      to   { background: rgba(0,0,0,0.9); }
+    }
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+</style>
+  <main>
+
+    <section>
+      <h2>Overview</h2>
+      <p>This project aimed to establish fractal calculus as a powerful tool for rheological modeling of soft biological matter, largely attributed to its mathematical simplicity
+          and ability to capture the spectrum of behavior between classical solid and fluid rheological models.</p>
+
+      <h2>Graphical Abstract</h2>
+        <div class="text-box">
+    
+    <img src="Graphical_abstract_V2.png" alt="Sample" onclick="openOverlay(this.src)">
+  </div>
+
+  <!-- 🔹 The overlay (fullscreen zoom) goes right before </body> -->
+  <div class="overlay" id="overlay" onclick="closeOverlay()">
+    <img id="overlayImage" src="" alt="Fullscreen">
+  </div>
+
+      <h2>Introduction</h2>
+      <p>
+      Classical rheological models such as the Standard Linear Solid, Generalised Maxwell, Zener and Poynting Thomson models constitute a significant fraction of the employed approaches to characterise cells and tissues. 
+      However, classical frameworks have distinct models to capture solid and fluid like behavior. A majority of soft biological matter and their constituents exhibit complex multiscale power law rheology and cannot be classified as viscoelastic solids or fluids.
+      Fractional calculus based frameworks initially offered promise, but suffered from scaling problems due to the high mathematical and computational complexity, which was accompanied by lack of causality, resulting in questionable physical significance.  
+      </p>
+
+      <p>
+      Fractal calculus is a relatively new yet powerful tool in non-integer calculus proposed as an causal, mathematically efficient alternative to the global fractional calculus. 
+      With strong correlations between mechanical properties and progression of disease in soft biological matter being established, the developed Fractal Framework consisting of Generalized Fractal rheological models and 
+      Fractal Self-Similar Hierarchical structures which serve as strong advancements in capturing the transition of viscoelasticity, fluidity and plasticity across various pathological states of biological matter.   
+      </p>
+
+      <p>
+        Motivation for the application of fractal calculus in modeling soft biological matter lies beyond the mathematical and computational advantages it offers over fractional calculus. 
+        The foundational principles of fractals and fractal geometry, the widely appreciated fractal geometry of nature and long-range power-law correlations in a wide variety of systems in biology and medicine
+         are of great relevance. Rather than a unique characteristic length or time scale, many biological systems have been described to possess fractal or self-affine properties. 
+         These fractal properties in different systems are of varying origin, appearance, and nature. While some of the earliest studies of fractals in biology revolved around the morphology of the lung bronchioles and arterial system, such self-similarity and long-range power-law correlations were also observed
+        in their rheological nature
+      </p>
+
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Fractal framework is proposed as a superset of exisiting classical rheological models and mathematically simple alternative to fractional rheological models</li>
+        <li>Independent time scaling incorporated into rheological models for the first time to account for multi-stage power law rheology of biological matter</li>
+        <li>Fractal self-similar hierarchical structures are employed with fully tunable fluidity for each hierarchical level for multiscale modeling.</li>
+        <li>Unifiied platform can be employed to investigate stiffness, fluidity and plasticity in control and cancer cells</li>
+        <li>Viscoplastic model parameters can be used as potential biomechanical markers associated with disease progression</li>
+        <li>Model capabilites demostrated by capturing wide range of control-cancer cells, mesenchymal cells and tissues such as various regions of the brain, stomach and ocular tissues all of which were characterized using different classical rheological models</li>
+        
+      </ul>
+
+      <h2>Links</h2>
+      <p>
+        <a href="https://dx.doi.org/10.2139/ssrn.5226588" target="_blank" rel="noopener">Read Paper</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vignesh Kumar Gopalakrishnan</p>
+  </footer>
+  <script>
+    function openOverlay(src) {
+      const overlay = document.getElementById('overlay');
+      const overlayImg = document.getElementById('overlayImage');
+
+      overlayImg.src = src;
+      overlay.style.display = 'flex';
+    }
+    function closeOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
