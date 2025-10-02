@@ -9,10 +9,10 @@
 }
 
 body {
-  background-color: #142834; /* Dark teal background */
-  color: #ffffff; /* Default: Orange text */
+  background-color: #151515;
+  color: #ffffff;
   line-height: 1.65;
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 2rem auto;
   padding: 0 1.5rem;
   font-size: 16px;
@@ -36,7 +36,7 @@ body.white-text nav ul li a {
 body.white-text nav ul li a:hover,
 body.white-text nav ul li a.active {
   background-color: #ffffff;
-  color: #142834; /* Dark teal when active/hover */
+  color: #1f1f1f; /* Dark teal when active/hover */
 }
 
 body.white-text a {
@@ -55,29 +55,33 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.75rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.9rem;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.7rem;
+  font-size: 1.7rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 h4 {
   font-size: 1.3rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #ffffff; /* white */
 }
 h5 {
   font-size: 1.0rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #ffffff; /* white */
@@ -93,17 +97,20 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
+  justify-content: center;
   padding: 0.5rem 0 1rem 0;
 }
 
 nav ul li a {
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.2rem;
   color: #fb8a48;
   padding: 6px 12px;
   border-radius: 4px;
   transition: background-color 0.25s ease, color 0.25s ease;
+  background-color: #121212
 }
 
 nav ul li a:hover,
@@ -114,7 +121,7 @@ nav ul li a.active {
 
 /* === MAIN CONTAINER === */
 main {
-  background: #1d3a4a;
+  background: #2b2b2bcb;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.2);
   padding: 2.5rem 3rem;
@@ -123,7 +130,8 @@ main {
 /* === PROJECT/PUBLICATION CARDS === */
 .project-card {
   border-left: 5px solid #fb8a48;
-  background-color: #1d3a4a;
+  border-right: 5px solid #fb8a48;
+  background-color: #242424;
   padding: 1.3rem 1.8rem;
   margin-bottom: 1.8rem;
   border-radius: 6px;
@@ -132,8 +140,9 @@ main {
 }
 
 .project-card:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.25);
+  background-color: #202020;
 }
 
 .project-card h2 {
