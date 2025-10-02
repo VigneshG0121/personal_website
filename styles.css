@@ -97,31 +97,42 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 4rem;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 1rem;
   justify-content: center;
   padding: 0.5rem 0 1rem 0;
 }
 
+nav ul li {
+  flex: 1 1 auto;       /* items grow/shrink evenly */
+  min-width: 100px;     /* ensures consistent button width */
+}
+
 nav ul li a {
+  display: block;       /* makes the whole box clickable */
+  text-align: center;   /* centers text inside */
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
   color: #fb8a48;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 3px 6px;
+  border-radius: 8px;
   transition: background-color 0.25s ease, color 0.25s ease;
-  background-color: #121212
+  background-color: #121212;
+
+  white-space: normal;  /* allow wrapping inside */
+  word-wrap: break-word;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #fb8a48;
-  color: #142834;
+  color: #151515;
 }
 
 /* === MAIN CONTAINER === */
 main {
-  background: #2b2b2bcb;
+  background: #2b2b2b;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgb(0 0 0 / 0.2);
   padding: 2.5rem 3rem;
